@@ -1,0 +1,21 @@
+λ>                                         | 8/..|                                           <λ
+
+                   | with or without mouse support             |
+                   | with or without ruby interface*           |
+           vim 7.4 | with or without lua interface             | command-t <- vim-7.4 with
+                   | with or without statusline support*       |              * ruby
+                   | with or without farsi support (don't ask) |              * statusline
+
+.  .        + Correct model of what software is
+|\ | o     
+| \| . . ,  + Purity
+|  | |  X  
+'  ' ' ' `  + Programmable, thus allowing automation
+
+            + Rich infrastructure — devops (NixOps), continuous integration (hydra), ...
+
+            + Platform-agnostic
+
+            + Backed by academic research
+
+λ>                                                                                           <λ

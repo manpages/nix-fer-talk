@@ -1,0 +1,22 @@
+λ>                                         | 9/..|                                           <λ
+
+                           H A S K E L L    A N D      N I X
+
+
+
+                 Hackage ---> Stackage ---> Nixpkgs <--- Nix overlays
+                        \____________________.^               ^
+                                                              |
+                                                     Other Haskell packages
+
+
+
+
+
+                    O N E   T O O L   T O   R U L E   T H E M   A L L
+
+                          o r   a t   l e a s t   t o   b u i l d   t h e m
+
+
+
+λ>                                                                                           <λ

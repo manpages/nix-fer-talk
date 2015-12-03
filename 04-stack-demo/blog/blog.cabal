@@ -1,0 +1,54 @@
+Name:               blog
+Version:            0.0.1
+License:            BSD2
+License-File:       LICENSE
+Author:             Jonn Mostovoy
+Synopsis:           CLI to instantiate/publish hakyll posts
+Description:
+            A turtle script to instantiate hakyll posts remotely
+
+Cabal-Version:  >=1.10
+Build-Type:     Simple
+
+Data-Files: blog.hs
+
+Library
+
+  Build-Depends: base,
+                 directory,
+                 extensible-exceptions,
+                 turtle,
+                 mtl,
+                 containers,
+                 text,
+                 time,
+                 process,
+                 unix,
+                 filepath
+
+  Hs-Source-Dirs:      src
+  GHC-Options:       -Wall
+  Exposed-Modules:    Blog
+  Other-Modules:      Paths_blog,
+                      Haskonf,
+                      System.Environment.FindBin
+
+Executable blog
+
+  Build-Depends: base,
+                 directory,
+                 turtle,
+                 mtl,
+                 extensible-exceptions,
+                 containers,
+                 text,
+                 time,
+                 blog,
+                 process,
+                 unix,
+                 filepath
+
+  Hs-source-dirs:   src
+  GHC-Options:    -Wall
+  Main-is:      Main.hs
+  Other-Modules:      Paths_blog

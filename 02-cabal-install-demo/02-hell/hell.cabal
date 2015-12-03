@@ -1,0 +1,16 @@
+name:                the-hell
+version:             0.1.0.0
+license-file:        LICENSE
+author:              Jonn Mostovoy
+maintainer:          amarr.industrial@gmail.com
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  exposed-modules: Hell
+  build-depends:   base,
+                   deepseq,
+                   limbo,
+                   semigroups < 0.18
+  hs-source-dirs: src
+  default-language:    Haskell2010

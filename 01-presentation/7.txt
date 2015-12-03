@@ -1,0 +1,24 @@
+λ>                                         | 7/..|                                           <λ
+
+
+
+
+                                    + Stackage is not only social
+                                    
+ ,-.  .           ,                  - Tracks Hackage history
+(   ` |           |                  - Computes tarball hashes
+ `-.  |-  ,-: ,-. | , ,-: ,-: ,-. 
+.   ) |   | | |   |<  | | | | |-'   + Most importantly though, stackage is social
+ `-'  `-' `-` `-' ' ` `-` `-| `-' 
+                          `-'        - Provides high standards of maintanence
+                                     - Stable nightly builds
+                                     - Maintained LTS, weekly updated, package sets
+     Stable hackage for Linux
+                                    + Stackage is huge (large enough)
+
+                                     - Stackage has 1,605 packages
+                                     
+
+
+
+λ> this slide uses material from cool talk by Peter Simons from NixCon'15: http://nn.lv/sog  <λ

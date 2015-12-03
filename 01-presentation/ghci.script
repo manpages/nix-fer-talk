@@ -1,0 +1,54 @@
+import qualified System.IO.Strict as StrictIO
+import qualified System.Directory as Dir
+
+-- Slides in my ghci!
+
+let slide_ = StrictIO.readFile ".slide"
+
+let xpp_ x = show $ (read x) + 1
+
+let xmm_ x = show $ (read x) - 1
+
+let slide_fioMinusOne = do { writeFile ".slide" "-1" ;
+                 return "0" }
+
+let slide_fioPlusPlus = do { x <- slide_ ;
+                             writeFile ".slide" $ xpp_ x ;
+                             return $ xpp_ x }
+
+let slide_fioMinusMinus = do { x <- slide_ ;
+                               writeFile ".slide" $ xmm_ x ;
+                               return $ xmm_ x }
+
+let slide_fioPut x = do { writeFile ".slide" x ;
+                          return x }
+
+let slide_present _ = return $ unlines [ "slide <- slide_fioMinusOne"
+                                       , ":!clear"
+                                       ,  ":next" ]
+
+let slide_next _ = let loadMaybe x = do {
+                      que <- Dir.doesFileExist (x ++ ".hs") ;
+                      if que
+                        then return [ ":!clear"
+                                    , "lastRead <- readFile \"" ++ x ++ ".hs\""
+                                    , "putStrLn lastRead"
+                                    , ":load " ++ x ++ ".hs" ]
+                        else return []
+                    } in do {
+                    ioSlide <- slide_fioPlusPlus ;
+                    ioCode  <- loadMaybe ioSlide ;
+                    return $ unlines $ [ ":!clear"
+                                       , "lastRead <- readFile \"" ++ ioSlide ++ ".txt\""
+                                       , "putStr lastRead"
+                                       , ":!read"
+                                       ] ++ (ioCode :: [String]) ++ [ ":script .present" ] }
+
+let slide_previous _ = slide_fioMinusMinus >> slide_fioMinusMinus >> slide_next ""
+
+let slide_goto x = slide_fioPut x >> slide_fioMinusMinus >> slide_next ""
+
+:def! present slide_present
+:def! next slide_next
+:def! previous slide_previous
+:def! goto slide_goto

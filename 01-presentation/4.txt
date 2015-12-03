@@ -1,0 +1,22 @@
+λ>                                         | 4/..|                                           <λ
+
+
+
+ ,-.     .       .                   .        + Developed quickly to address problems
+/        |       |   o               |          of packaging
+|    ,-: |-. ,-: |   . ,-.   ;-. ,-. |-
+\    | | | | | | |   | `-.   | | | | |        + Cabal the library is OK
+ `-' `-` `-' `-` '   ' `-'   ' ' `-' `-'
+                                              + Cabal the binary has ad-hoc solutions
+              .                   .       .
+ ,-           |                   |       |   + Hackage has ad-hoc solutions and
+ |  . . ;-. ,-| ,-: ;-.-. ,-. ;-. |-  ,-: |     misfeatures ( http://nn.lv/afe )
+ |- | | | | | | | | | | | |-' | | |   | | |
+ |  `-` ' ' `-' `-` ' ' ' `-' ' ' `-' `-` '   + The way Hackage is supposed to be used
+-                                               causes regular breakage of packages
+
+
+
+
+
+λ>                                                                                           <λ
